@@ -187,10 +187,6 @@
   display: block;
 }
 
-.dialog__button {
-  display: inline-block;
-  text-decoration: none;
-}
 .dialog[open] {
   display: grid;
 }
@@ -232,11 +228,12 @@
   cursor: pointer;
   font-family: var(--font-accent);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
   width: 100%;
   background-color: transparent;
   color: var(--accent-color);
   text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
  }
 
 .dialog__button:hover {
