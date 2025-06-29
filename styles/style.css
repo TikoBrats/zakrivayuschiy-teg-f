@@ -9,8 +9,330 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-main);
+  font-variation-settings: "wght" var(--font-weight-text);
+  color: var(--accent-color);
+  background-color: #fff;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  text-align: center;
+  border: 2px solid var(--accent-color);
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 368px;
+  padding-block-start: var(--header-padding);
+  background-color: var(--background-color);
+  max-width: 696px;
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  font-family: var(--font-accent);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-block-end: 20px;
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  font-family: var(--font-accent);
+  font-weight: 400;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-block-end: 100px;
+}
+
+.card {
+  border: 2px solid var(--accent-color);
+  max-width: var(--section-width);
+  background-color: var(--background-color);
+  min-height: 224px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-variation-settings: "wght" var(--font-weight-title);
+  padding: 5px 10px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.card__image-wrapper {
+  position: relative;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+  opacity: 50%;
+  color: var(--accent-color);
+  text-shadow: none;
+  z-index: 1;
+}
+.save-button-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.save-button {
+  position: relative;
+  border: 2px solid var(--accent-color);
+  padding: 15px 20px;
+  cursor: pointer;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.save-button:hover {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.save-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.save-icon {
+  width: 21px;
+  height: 21px;
+  fill: var(--accent-color);
+  position: relative;
+  mix-blend-mode: difference;
+  color: var(--background-color);
+  font-size: 14px;
+}
+
+.card__content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+
+.card__icon-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  gap: 6px;
+  background-color: #fff;
+  align-self: end;
+  border: 2px solid transparent;
+  cursor: pointer;
+  height: 38px;
+  transition: transform 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__like-button {
+  background-color: #fff;
+  border: 2px solid var(--accent-color);
+  padding: 10px 35px;
+  cursor: pointer;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.button__text {
+  position: relative;
+  mix-blend-mode: difference;
+  color: var(--background-color);
+  font-size: 14px;
+}
+
+.dialog {
+  grid-template-rows: repeat(2, min-content);
+  border: 2px solid var(--accent-color);
+  padding: 0;
+  overflow: hidden;
+  max-width: 357px;
+}
+
+.dialog:target {
+  display: block;
+}
+
+.dialog__button {
+  display: inline-block;
+  text-decoration: none;
+}
+.dialog[open] {
+  display: grid;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__content {
+  display: grid;
+  grid-template-columns: 50px 225px;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.dialog__icon {
+  color: var(--accent-color);
+  width: 39px;
+  height: 39px;
+}
+
+.dialog__text {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  max-width: 234px;
+}
+
+.dialog__actions {
+  padding: 0 30px 30px;
+}
+
+.dialog__button {
+  position: relative;
+  border: 2px solid var(--accent-color);
+  padding: 12.5px;
+  cursor: pointer;
+  font-family: var(--font-accent);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  background-color: transparent;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  
+}
+
+
+.dialog__button:hover {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.dialog__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.card__image--fresh-start {
+  filter: saturate(30%);
+}
+
+.card__image--doubt {
+  filter: saturate(30%);
+  filter: brightness(100%) saturate(460%) hue-rotate(0deg);
+}
+
+.card__image--perfection {
+  filter: hue-rotate(30deg);
+}
+
+.card__image--community {
+  filter: invert(500%) brightness(100%) contrast(55%);
+}
+
+.card__image--nostalgia {
+  filter: sepia(80%) brightness(90%) contrast(110%);
+}
+
+.card__image--hands-down {
+  filter: blur(15px);
+}
+
+.card__image--present {
+  filter: sepia(45%) hue-rotate(90deg) brightness(95%) contrast(60%)
+    saturate(250%) blur(1.3px);
+}
+
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
+  }
+}
+
+@supports not (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
+  .card__label {
+    text-shadow: -1px -1px 0 var(--background-color),
+      1px -1px 0 var(--background-color), -1px 1px 0 var(--background-color),
+      1px 1px 0 var(--background-color);
+  }
+}
+
+@media (width <= 375px) {
+  .header {
+    min-height: 323px;
+  }
+  .page {
+    min-height: 667px;
+    min-width: 375px;
+  }
+  .save-button {
+    padding: 10px 15px;
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .save-icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+  }
 }
