@@ -1,18 +1,12 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
 .like-icon {
   transform-origin: center;
   cursor: pointer;
 }
+
+.like-icon:focus {
+  box-shadow: 0 0 0 2px #000; 
+}
+
 .like-icon .core {
   fill: transparent;
   transition: fill 0.3s linear;
@@ -93,28 +87,3 @@
   }
 }
 
-.card__like-button::before,
-.save-button::before,
-.dialog__button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  transition: transform 0.5s ease-in-out;
-}
-
-.card__like-button:hover::before,
-.save-button:hover::before,
-.dialog__button:hover::before {
-  transform: translateX(100%);
-}
-
-.card__like-button:focus,
-.save-button:focus,
-.dialog__button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
-}

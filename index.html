@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -14,8 +13,8 @@
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header__title">&lt;/HTML&gt;</h1>
-      <p class="header__subtitle">закрывающий тег</p>
+      <a class="header__link">&lt;/HTML&gt;</a>
+      <h1 class="header__title">закрывающий тег</h1>
     </header>
 
     <main class="main">
@@ -77,7 +76,11 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" id="like-button-01">
+            <button
+              class="button card__like-button"
+              type="button"
+              id="like-button-01"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -142,7 +145,11 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" id="like-button-02">
+            <button
+              class="button card__like-button"
+              type="button"
+              id="like-button-02"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -205,7 +212,11 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" id="like-button-03">
+            <button
+              class="button card__like-button"
+              type="button"
+              id="like-button-03"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -270,7 +281,11 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" id="like-button-04">
+            <button
+              class="button card__like-button"
+              type="button"
+              id="like-button-04"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -336,7 +351,11 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" id="like-button-05">
+            <button
+              class="button card__like-button"
+              type="button"
+              id="like-button-05"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -399,7 +418,11 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" id="like-button-06">
+            <button
+              class="button card__like-button"
+              type="button"
+              id="like-button-06"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -464,7 +487,11 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" id="like-button-07">
+            <button
+              class="button card__like-button"
+              type="button"
+              id="like-button-07"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -491,7 +518,7 @@
             и есть результат.
           </p>
           <p class="card__text">
-            Место для ваших воспоминаний о начале обучения.
+            Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути
           </p>
           <div class="card__buttons">
             <button
@@ -530,15 +557,23 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" id="like-button-08">
+            <button
+              class="button card__like-button"
+              type="button"
+              id="like-button-08"
+            >
               <span class="button__text">Like</span>
             </button>
           </div>
         </div>
       </article>
 
-      <div class="save-button-container">
-        <button class="save-button" onclick="window['menu-dialog'].showModal()">
+      <!-- <div class="save-button-container"> -->
+        <button
+          class="button save-button"
+          type="button"
+          onclick="window['menu-dialog'].showModal()"
+        >
           <svg
             class="save-icon"
             width="39"
@@ -550,9 +585,8 @@
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
-      </div>
+      <!-- </div> -->
       <dialog class="dialog" id="menu-dialog">
-        <div class="dialog__content">
           <svg
             class="dialog__icon"
             width="39"
@@ -563,15 +597,15 @@
             <use href="./svg/save.svg#diskette"></use>
           </svg>
           <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
-        </div>
-        <div class="dialog__actions">
+        <form class="dialog__actions">
           <button
-            class="dialog__button"
+            class="button dialog__button"
+            type="button"
             onclick="window['menu-dialog'].close()"
           >
             <span class="button__text">OK</span>
           </button>
-        </div>
+        </form>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
