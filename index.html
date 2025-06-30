@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/apple.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -518,7 +519,8 @@
             и есть результат.
           </p>
           <p class="card__text">
-            Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути
+            Место, чтобы остановиться, подумать и написать, что вы чувствуете в
+            этой точке пути
           </p>
           <div class="card__buttons">
             <button
@@ -569,34 +571,34 @@
       </article>
 
       <!-- <div class="save-button-container"> -->
-        <button
-          class="button save-button"
-          type="button"
-          onclick="window['menu-dialog'].showModal()"
+      <button
+        class="button save-button"
+        type="button"
+        onclick="window['menu-dialog'].showModal()"
+      >
+        <svg
+          class="save-icon"
+          width="39"
+          height="39"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 39 39"
         >
-          <svg
-            class="save-icon"
-            width="39"
-            height="39"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 39 39"
-          >
-            <use href="./svg/save.svg#diskette"></use>
-          </svg>
-          <span class="button__text">Сохранить на память</span>
-        </button>
+          <use href="./svg/save.svg#diskette"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
       <!-- </div> -->
       <dialog class="dialog" id="menu-dialog">
-          <svg
-            class="dialog__icon"
-            width="39"
-            height="39"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 39 39"
-          >
-            <use href="./svg/save.svg#diskette"></use>
-          </svg>
-          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        <svg
+          class="dialog__icon"
+          width="39"
+          height="39"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 39 39"
+        >
+          <use href="./svg/save.svg#diskette"></use>
+        </svg>
+        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
         <form class="dialog__actions">
           <button
             class="button dialog__button"
