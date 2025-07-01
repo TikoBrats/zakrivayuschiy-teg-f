@@ -231,15 +231,6 @@
   text-transform: uppercase;
 }
 
-.dialog__button:hover {
-  box-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.dialog__button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--accent-color);
-}
-
 .card__image--fresh-start {
   filter: saturate(30%);
 }
@@ -265,7 +256,7 @@
 }
 
 .card__image--present {
-  filter: sepia(45%) hue-rotate(90deg) brightness(95%) contrast(60%)
+  filter: sepia(45%) hue-rotate(90deg) brightness(95%) contrast(60%) A
     saturate(250%) blur(1.3px);
 }
 
